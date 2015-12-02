@@ -1,6 +1,5 @@
-package com.guilhermef.NasaRobot;
+package com.guilhermef.nasa;
 
 public class OutOfBoundaries extends Exception {
-	
 
 }

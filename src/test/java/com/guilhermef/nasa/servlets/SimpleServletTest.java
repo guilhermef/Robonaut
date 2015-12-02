@@ -1,4 +1,4 @@
-package com.guilhermef.NasaRobot.servlets;
+package com.guilhermef.nasa.servlets;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

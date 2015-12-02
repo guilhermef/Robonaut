@@ -1,8 +1,10 @@
-package com.guilhermef.NasaRobot;
+package com.guilhermef.nasa.robot;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.guilhermef.nasa.OutOfBoundaries;
 
 public class RobonautTest {
 
