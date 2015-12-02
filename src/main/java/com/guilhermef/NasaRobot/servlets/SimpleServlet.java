@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.guilhermef.NasaRobot.OutOfBoundaries;
 import com.guilhermef.NasaRobot.Robonaut;
 
 public class SimpleServlet extends HttpServlet {

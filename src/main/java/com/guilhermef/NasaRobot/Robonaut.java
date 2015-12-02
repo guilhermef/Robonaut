@@ -7,9 +7,6 @@ public class Robonaut {
 	private int direction = 0;
 	static private String[] namedDirection = {"N", "E", "S", "W"};
 	private String ArgumentPattern = "[MRL]+";
-
-	public Robonaut() {
-	}
 	
 	public String getFinalPosition() {
 		String finalPosition = "(" + this.x + ", " + this.y + ", " + this.getNamedDirection() + ")"; 

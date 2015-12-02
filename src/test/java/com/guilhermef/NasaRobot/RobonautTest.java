@@ -1,7 +1,6 @@
 package com.guilhermef.NasaRobot;
 
 import junit.framework.TestCase;
-import com.guilhermef.NasaRobot.Robonaut;
 
 public class RobonautTest extends TestCase {
 
