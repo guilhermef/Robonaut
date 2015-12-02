@@ -5,7 +5,7 @@
   <artifactId>NasaRobot</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>NasaRobot Maven Webapp</name>
+  <name>Robonaut WebApp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -22,6 +22,6 @@
     
   </dependencies>
   <build>
-    <finalName>NasaRobot</finalName>
+    <finalName>Robonaut</finalName>
   </build>
 </project>
