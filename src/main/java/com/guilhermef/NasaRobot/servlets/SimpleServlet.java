@@ -22,7 +22,8 @@ public class SimpleServlet extends HttpServlet {
 			out.println(robot.getFinalPosition());
 		} catch (Exception e) {
 			resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+		} finally {
+			out.close();
 		}
-		out.close();
 	}
 }

@@ -1,54 +1,46 @@
 package com.guilhermef.NasaRobot;
 
-import junit.framework.TestCase;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
-public class RobonautTest extends TestCase {
+public class RobonautTest {
 
 	private Robonaut robot;
 
-	protected void setUp() throws Exception {
+	@Before
+	public void setUp() throws Exception {
 		this.robot = new Robonaut();
 	}
 
+	@Test
 	public void testGetFinalPositionWhenStopped() {
 		String pos = this.robot.getFinalPosition();
-		assertEquals("(0, 0, N)", pos);
+		Assert.assertEquals("(0, 0, N)", pos);
 	}
 	
-	public void testOnInvalidParams() {
-		boolean passed = false;
-		try{
-			this.robot.move("AAA");
-		} catch (IllegalArgumentException e) {
-			passed = true;
-		} catch (OutOfBoundaries e) {
-			e.printStackTrace();
-		}
-		assertTrue(passed);
+	@Test(expected = IllegalArgumentException.class)
+	public void testOnInvalidParams() throws IllegalArgumentException, OutOfBoundaries {
+		this.robot.move("AAA");
 	}
 	
-	public void testOnRunningToTheHills() {
-		boolean passed = false;
-		try{
-			this.robot.move("MMMMMMMMMMMMMMMMMMMMMMMM");
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (OutOfBoundaries e) {
-			passed = true;
-		}
-		assertTrue(passed);
+	@Test(expected = OutOfBoundaries.class)
+	public void testOnRunningToTheHills() throws IllegalArgumentException, OutOfBoundaries {
+		this.robot.move("MMMMMMMMMMMMMMMMMMMMMMMM");
 	}
 	
+	@Test
 	public void testOnHittingNotSoHardTheDanceFloor() throws IllegalArgumentException, OutOfBoundaries {
 		this.robot.move("MML");
 		String pos = this.robot.getFinalPosition();
-		assertEquals("(0, 2, W)", pos);
+		Assert.assertEquals("(0, 2, W)", pos);
 	}
 	
+	@Test
 	public void testOnHittingHardTheDanceFloor() throws IllegalArgumentException, OutOfBoundaries {
 		this.robot.move("MMRMMRMM");
 		String pos = this.robot.getFinalPosition();
-		assertEquals("(2, 0, S)", pos);
+		Assert.assertEquals("(2, 0, S)", pos);
 	}
 
 }
