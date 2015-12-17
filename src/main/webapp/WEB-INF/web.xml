@@ -6,7 +6,7 @@
   <display-name>Robonaut Application</display-name>
   <servlet>
   	<servlet-name>Robonaut</servlet-name>
-  	<servlet-class>com.guilhermef.NasaRobot.servlets.SimpleServlet</servlet-class>
+  	<servlet-class>com.guilhermef.nasa.servlets.SimpleServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>Robonaut</servlet-name>
